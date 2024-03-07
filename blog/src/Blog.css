@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* Navigation */
+.nav {
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Blog Title */
+.nav-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.list {
+  display: flex;
+  gap: 20px;
+}
+
+.list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #f0f0f0;
+}
+
+/* Login Form Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Form */
+.login-form {
+  background-color: darkorange;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+/* Login Form Title */
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-grp {
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Label */
+.input-group label {
+  font-size: 16px;
+  color: #555555;
+}
+
+/* Input */
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #613737;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Home.css */
+
+/* Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Content */
+.ite {
+  text-align: center;
+}
+
+/* Heading Style */
+.headingStyle {
+  font-size: 50px;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button Style */
+.home-btn {
+  padding: 10px 20px;
+  background-color: chartreuse;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+}
+
+.login-container {
+  margin-top: 50px; 
+}
