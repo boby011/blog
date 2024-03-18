@@ -1,28 +1,42 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom'
-import './Blog.css'
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import './Blog.css';
 
- const Nav = () => {
+const Nav = () => {
+  const navigate = useNavigate();
+  const user = localStorage.getItem('id');
+
+  const handleClick = () => {
+    localStorage.clear();
+    navigate(`/Login`);
+  };
+
   return (
     <>
       <div className='nav'>
-      
-          <div className='head'>
-            <h2 className='nav-title'>BLOG</h2>
-          </div>
-
-          <div className='list'>
-          <Link to='/'><span style={{color:'white'}}>Home</span></Link>
-          <Link to='/Login'><span style={{color:'white'}}>Login</span></Link>
-          <Link to='/Sigin'> <span style={{color:'white'}}>Signin</span></Link>
-          {/* <Link to='/fav'><span style={{color:'white'}}>Favorite</span></Link>
-          <Link to='/coun'> <span style={{color:'white'}}>Country</span></Link> */}
-          </div>
-        
+        <div className='head'>
+          <h2 className='nav-title'>Writer</h2>
+        </div>
+        <div className='list'>
+          <Link to='/'><span>Home</span></Link>
+          <Link to='/blogs'><span>Blogs</span></Link>
+          {user ? (
+            <>
+              <Link to='/create'><span>Create your Blog</span></Link>
+              <Link to='/User'><span>Profile</span></Link>
+              <button className="logout-btn" onClick={handleClick}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to='/Login'><span>Login</span></Link>
+              <Link to='/Sigin'><span>Signin</span></Link>
+            </>
+          )}
+        </div>
       </div>
-      
       <Outlet />
     </>
   );
 };
-export default Nav
+
+export default Nav;

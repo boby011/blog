@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
+ 
   data:''
 }
 
 export const counterslice = createSlice({
-    name: 'reg',
+    name: 'userdata',
     initialState,
     reducers: {
         adddata:(state,action)=>{
@@ -14,6 +14,6 @@ export const counterslice = createSlice({
       }
     },
   })
-  export const {adddata } = counterslice.actions
+  export const {adddata,postdata } = counterslice.actions
   
   export default counterslice.reducer

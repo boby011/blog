@@ -1,8 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
 /* Navigation */
 .nav {
-  background-color: #007bff;
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +11,7 @@
 /* Blog Title */
 .nav-title {
   color: #ffffff;
+  font-family: "Moul", serif;
   font-size: 24px;
   font-weight: bold;
 }
@@ -25,6 +25,7 @@
 .list a {
   color: #ffffff;
   text-decoration: none;
+  font-family: "Moul", serif;
   font-size: 18px;
   transition: color 0.3s ease;
 }
@@ -33,7 +34,33 @@
   color: #f0f0f0;
 }
 
-/* Login Form Container */
+/* Apply styles to active navigation link */
+.list a.active {
+  font-family: "Moul", serif;
+  font-weight: bold;
+  /* Add any additional styles for active link */
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #662D8C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Moul", serif;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+
+/* Login Form */
+/* Login Form */
 .login-container {
   display: flex;
   justify-content: center;
@@ -41,47 +68,48 @@
   height: 100vh;
 }
 
-/* Login Form */
 .login-form {
-  background-color: darkorange;
+  margin-top: -200px;
+ 
+  background-color: #662D8C;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
   width: 400px;
+  text-align: center;
 }
 
 /* Login Form Title */
 .login-title {
-  text-align: center;
+  font-family: "Moul", serif;
   font-size: 24px;
   color: #333333;
-  margin-bottom: 20px;
-}
-
-/* Form Group */
-.form-grp {
   margin-bottom: 20px;
 }
 
 /* Input Group */
 .input-group {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 /* Label */
 .input-group label {
+  font-family: "Moul", serif;
   font-size: 16px;
   color: #555555;
+  margin-bottom: 5px;
+  display: block;
 }
 
 /* Input */
-.input-group input[type="text"],
 .input-group input[type="password"],
 .input-group input[type="email"] {
-  width: 100%;
+  width: calc(100% - 20px); /* Adjusted width to accommodate padding */
   padding: 10px;
   border: 1px solid #613737;
   border-radius: 5px;
+  font-family: "Moul", serif;
   font-size: 16px;
 }
 
@@ -94,11 +122,83 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Moul", serif;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sign Up Form */
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sign-up-form {
+  margin-top: 150px;
+  background-color: #662D8C;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* Sign Up Form Title */
+.sign-up-title {
+  font-family: "Moul", serif;
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Label */
+.input-group label {
+  font-family: "Moul", serif;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input */
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="email"] {
+  width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+  padding: 10px;
+  border: 1px solid #613737;
+  border-radius: 5px;
+  font-family: "Moul", serif;
+  font-size: 11px;
+}
+
+/* Button */
+.sign-up-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Moul", serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
   background-color: #0056b3;
 }
 
@@ -145,4 +245,190 @@
 
 .login-container {
   margin-top: 50px; 
+}
+
+/*Create Blog*/
+
+
+.create-container {
+  display: flex;
+  font-family: "Moul", serif;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.login-title {
+  font-family: "Moul", serif;
+  font-size: 24px; 
+  margin-bottom: 20px; 
+}
+
+.cinput-group {
+  margin-bottom: 20px;
+}
+
+.cinput-group label {
+  margin-right: 10px;
+  font-family: "Moul", serif;
+  font-weight: bold; 
+}
+
+.carea {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.carea {
+  resize: vertical; 
+}
+
+.cbutton {
+  background-color: #007bff;
+  color: white;
+  border: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Moul", serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Adding a gradient background */
+  background-image: linear-gradient(to bottom, #007bff, #0056b3);
+}
+
+.cbutton {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Adding a slight lift on hover */
+}
+
+
+/* Blog.css */
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff1e1;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color:  #1d3c45;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color:  #d2601a;
+  /* Limit the height and overflow content */
+  max-height: 150px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit number of lines to display */
+  -webkit-box-orient: vertical;
+}
+
+
+/*profile*/
+/* User.css */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.profile {
+  background-color: #734b6d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+.profile h1 {
+ 
+  font-family: "Moul", serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.proform-group {
+  margin-bottom: 15px;
+}
+
+.proform-group label {
+  display: block;
+  font-size: 12px;
+  font-family: "Moul", serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.proform-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Moul", serif;
+  font-size: 12px;
+}
+
+.proform-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.probutton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Moul", serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button {
+  font-family: "Moul", serif;
+  margin-top: 10px;
 }

@@ -1,18 +1,11 @@
 const mongoose=require('mongoose')
 const userscheme=new mongoose.Schema({
-    blogtitle:{
-        type:String,
-        unique:true,
-        required:true
-    },
     firstname:{
         type:String,
-        unique:true,
         required:true
     },
     secondname:{
         type:String,
-        unique:true,
         required:true
     },
     email:{

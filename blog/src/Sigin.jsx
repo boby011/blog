@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import './Blog.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 export const Sigin = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    blogtitle: '',
     firstname: '',
     secondname: '',
     username: '',
@@ -14,57 +16,31 @@ export const Sigin = () => {
   });
 
   const handleChange = (event) => {
-    // const { name, value } = event.target;
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('ku');
-      // Send registration data to the backend
-        const response = await axios.post('http://localhost:5000/insert', formData);
-        console.log(response,'sdfd');
+      const response = await axios.post('http://localhost:5000/insert', formData);
 
-        if (response.data.emailExists) {
-          toast.error('Email exists')
-        } else {
-          // Display success message
-          alert('Registration successful');
-
-          // Clear form data
-          // setFormData({
-          //   blogtitle: '',
-          //   firstname: '',
-          //   secondname: '',
-          //   username: '',
-          //   password: '',
-          //   email: '',
-          // });
-        }
-        
-      
+      if (response.data.emailExists) {
+        toast.error('Email exists')
+      } else {
+        alert('Registration successful');
+        setFormData('')
+        navigate('/Login');
+      }
     } catch (error) {
-      // Display error message if registration fails
       toast.error('Registration failed.');
     }
   };
-console.log(formData,'form data');
+
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h1 className="login-title">Register</h1>
+    <div className="sign-up-container">
+      <form className="sign-up-form" onSubmit={handleSubmit}>
+        <h1 className="sign-up-title">Register</h1>
         <div className='form-grp'>
-          <div className='input-group'>
-            <label>Blog Title:</label>
-            <input
-              type='text'
-              name='blogtitle'
-              placeholder='Blog Title'
-              value={formData.blogtitle}
-              onChange={handleChange}
-            />
-          </div>
           <div className='input-group'>
             <label>First Name:</label>
             <input
@@ -115,7 +91,7 @@ console.log(formData,'form data');
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="login-btn">Sign Up</button>
+          <button type="submit" className="sign-up-btn">Sign Up</button>
         </div>
       </form>
       <ToastContainer />
@@ -123,3 +99,4 @@ console.log(formData,'form data');
   );
 };
 
+export default Sigin;
